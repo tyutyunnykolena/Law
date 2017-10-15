@@ -1,0 +1,17 @@
+@import "../component";
+
+#sixth_block_left
+{
+	background: url($background-path + "background.jpg") no-repeat center center;
+}
+#sixth_block_right h2
+{
+    @include TextDecoration(20px, "Raleway", #262626);
+    font-weight:500;
+	margin-bottom:30px;
+}
+.block6_right_small_block
+{
+    @include WidthHeight(22%, 20%);
+	display: $display;
+}

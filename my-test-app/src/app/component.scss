@@ -1,0 +1,17 @@
+$white: white;
+$grey: #f5f5f5;
+$display: inline-block;
+$background-path: "/assets/Images/Pictures/";
+$absolute-position: absolute;
+$none: none;
+@mixin WidthHeight($width, $height)
+{
+    width: $width;
+    height: $height;
+}
+@mixin TextDecoration($font-size, $font-family, $color)
+{
+    font-size: $font-size;
+    font-family: $font-family;
+    color: $color;
+}
