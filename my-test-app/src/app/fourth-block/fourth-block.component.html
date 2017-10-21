@@ -1,6 +1,14 @@
 <div class="fourth_block">
   <h3>Meet Our Attorneys</h3>
-  <div class="employers">
+
+  <div class="employers"> 
+    <div class="employer" *ngFor='let block of employer' id = "employer_{{block.index}}"> 
+      <img class="employer_photo" src= {{block.ImgSrc}}>
+      <span class="employer_name">{{ block.text1 }}</span>
+      <span class="employer_post">{{ block.text2 }}</span>
+    </div>
+  </div>
+  <!-- <div class="employers">
   <div class="employer" id="first_employer">
   <img class="employer_photo" src="/assets/Images/employer_photo1.png" alt="employer_photo1">
   <span class="employer_name">Alex Smith</span>
@@ -21,5 +29,7 @@
   <span class="employer_name">Lexi Tylor</span>
   <span class="employer_post">Partner</span>
   </div>
+  </div> -->
+
   </div>
-  </div>
+  

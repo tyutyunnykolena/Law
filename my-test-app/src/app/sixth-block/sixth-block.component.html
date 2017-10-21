@@ -4,7 +4,13 @@
   <div id="sixth_block_right">
   <h2>How it works</h2>
   <p>Man bun hashtag microdosing meggings, art party vegan messenger bag waistcoat cred shoreditch fap.</p>
-  <div class="block6_right_small_block">
+
+  <div class="block6_right_small_block" *ngFor="let block of block6_right_small_block"> 
+      <img class="number_of_small_div" src= {{block.ImgSrc}}>
+      <h2>{{block.text1}}</h2>
+      <p> {{block.text2}} <br> {{block.text3}} </p>
+  </div>
+  <!-- <div class="block6_right_small_block">
   <img class="number_of_small_div" src="/assets/Images/Numbers/1.png" alt="1">
   <h2>Free Consultation</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore</p>
@@ -24,6 +30,8 @@
   <h2>Litigation</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore</p>
   </div>
+  </div> -->
   </div>
   </div>
-  </div>
+
+

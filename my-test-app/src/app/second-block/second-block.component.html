@@ -1,3 +1,4 @@
+<!--
 <div class="second_block">
   <ul>
   <li>
@@ -49,4 +50,13 @@
   </p>
   </li>
   </ul>
+  </div> -->
+
+  <div class="second_block"> 
+    <ul>
+      <li *ngFor="let block of second_block">
+        <img class="block2_img" src= {{block.ImgSrc}}>
+        <p class="block2_text">{{block.text1}} <br> {{block.text2}} <br> {{block.text3}} <br> {{block.text4}}</p>
+      </li>
+    </ul>
   </div>
