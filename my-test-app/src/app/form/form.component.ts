@@ -20,6 +20,10 @@ export class FormComponent implements OnInit {
     {
       alert('Hello World!');
     }
+    else
+    {
+      alert('You need to registrate!');
+    }
   }
 
 }
