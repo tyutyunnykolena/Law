@@ -18,7 +18,7 @@ export class FormComponent implements OnInit {
     var password = e.target.elements[1].value;
     if(username == "root" && password == "root")
     {
-      alert('Hello World!');
+      alert('Hello, World!');
     }
     else
     {
