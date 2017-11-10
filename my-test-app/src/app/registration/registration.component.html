@@ -1,0 +1,20 @@
+<div class="progress">
+    <div>
+    <a *ngIf="step == 1" class = "orange">1</a>
+    <a *ngIf="step != 1 && !product.step1saved" class = "grey">1</a>
+    <a *ngIf="step != 1 && product.step1saved" class = "green">1</a>
+    <a *ngIf="step == 2" class = "orange">2</a>
+    <a *ngIf="step != 2 && !product.step2saved" class = "grey">2</a>
+    <a *ngIf="step != 2 && product.step2saved" class = "green">2</a>
+    <a *ngIf="step == 3" class = "orange">3</a>
+    <a *ngIf="step != 3 && !product.step3saved" class = "grey">3</a>
+    <a *ngIf="step != 3 && product.step3saved" class = "green">3</a>
+    </div>
+    <br>
+    <app-general-information *ngIf="step==1" [product] = "product" (generalInformationSaved) = "SaveUserGeneralInformation($event)"></app-general-information>
+    <app-more-details *ngIf="step==2" [product] = "product" (moreDetailsSaved) = "SaveUserMoreDetails($event)"></app-more-details>
+    <app-set-featured *ngIf="step==3" [product] = "product" (setFeaturedSaved) = "SaveUserSetFeatured($event)" (allSaved) = "finish($event)"></app-set-featured>
+    <app-all-information *ngIf="step==4" [product] = "product"></app-all-information>
+    <button *ngIf = "step > 1 && step < 4" (click) = "gotoPage(false)">Previous</button>
+    <button *ngIf = "step > 0 && step < 3" (click) = "gotoPage(true)">Next</button>
+    </div>

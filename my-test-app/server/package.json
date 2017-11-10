@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyutyunnykolena/tyutyunnykolena.git"
+  },
+  "keywords": [
+    "key"
+  ],
+  "author": "TyutyunnykOlena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyutyunnykolena/tyutyunnykolena/issues"
+  },
+  "homepage": "https://github.com/tyutyunnykolena/tyutyunnykolena#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

@@ -1,0 +1,67 @@
+@import "../component";
+
+footer
+{
+	background-color: #232323;
+}
+#top_section_of_footer
+{
+    padding-left: 5%;
+    div
+    {
+        display: $display;
+        vertical-align: top;
+    }
+}
+.footer_top_small_block
+{
+	color: $white;
+	height: 350px;
+    padding: 20px 40px 0 40px;
+    h2
+    {
+        letter-spacing: 1px;
+        font-size: 20px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 24px;
+        font-weight: 400;
+        font-style: normal;
+    }
+    a
+    {
+        color: $white;
+        font-size: 18px;
+        text-decoration: $none;
+    }
+    ul
+    {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+    li
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+#bottom_section_of_footer
+{
+	background-color: #454545;
+	height: 50px;
+	padding-top: 2%;
+}
+.footer_list
+{
+    padding-left: 50%;
+    margin: 0 0 0 0;
+    li
+    {
+        display: $display;
+    }
+}
+.menu_second
+{
+    @include TextDecoration(18px, "Lato", $white);
+	text-decoration:$none;
+	padding-left:25px;
+}

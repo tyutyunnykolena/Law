@@ -1,0 +1,15 @@
+@import "../component";
+#third_block_right
+{
+	padding: 120px 20px 30px 20px;
+	font-size: 18px;
+	color: $white;
+    float: right;
+    @include WidthHeight(979px, 450px);
+	background-color: #343434;
+	background-repeat: repeat;
+}
+.block3_img
+{
+    @include WidthHeight(500px, 600px);
+}
