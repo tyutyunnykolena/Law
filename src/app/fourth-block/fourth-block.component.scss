@@ -1,0 +1,48 @@
+@import "../component";
+
+.fourth_block h3
+{
+    text-align: center;
+    @include TextDecoration(30px, Arial, #3d3d3d);
+    font-weight: 500;
+}
+.employers
+{
+    div
+    {
+        display: $display;
+        font-size: 25px;
+        @include WidthHeight(275px, 300px);
+    }
+	font-size: 0;
+	text-align: center;
+	padding-bottom: 5%;
+}
+#employer_1, #employer_3
+{
+	border: 1px solid $grey;
+	background-color: $grey;
+}
+#employer_2, #employer_4
+{
+	border: 1px solid $grey;
+	background-color: $white;
+}
+.employer_photo, .employer_name, .employer_post
+{
+	margin: auto;
+	display: table;
+}
+.employer_photo
+{
+	padding: 30px 0px 20px 0px;
+}
+.employer_name
+{
+	padding: 10px 0px 10px 0px;
+}
+.employer_post
+{
+	font-size: 20px;
+	padding: 10px 0px 10px 0px;
+}
