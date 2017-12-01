@@ -2,6 +2,29 @@
     <div class = "input">
     <div>
     <label>Card number: </label>
+    <input type="text" name='email'  required  [(ngModel)]="product.email" #email="ngModel">
+    
+    <div *ngIf="cardnumber.errors && (cardnumber.dirty || cardnumber.touched)" class="alert alert-danger">
+    
+    <div [hidden]="!cardnumber.errors.required">
+    
+    Email required!
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- <div> -->
+    
+    <div class="input">
+    
+    <div>
+    
+    <label>Card number:</label>
     <input type = "number" name = "cardnumber" pattern = ".{16,16}" required  [(ngModel)]="product.cardnumber" #cardnumber = "ngModel">
     <div *ngIf = "cardnumber.errors && (cardnumber.dirty || cardnumber.touched)" class = "alert alert-danger">
     <div [hidden] = "!cardnumber.errors.required">
@@ -62,7 +85,9 @@
     </div>
     <div>
     <div class = "input">
-    <button [disabled] = "!product.step1saved || !product.step2saved || !product.step3saved" (click) = "finish()">Finish</button>
+    <button  (click)="finish()">Finish</button> 
+    <!-- <button [disabled] = "!product.step1saved || !product.step2saved || !product.step3saved" (click) = "finish()">Finish</button> -->
     </div>
     </div>
     </form>
+    

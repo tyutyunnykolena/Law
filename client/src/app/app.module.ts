@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule,Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http'; 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DpDatePickerModule } from 'ng2-date-picker';
@@ -13,23 +14,14 @@ import { FifthBlockComponent } from './fifth-block/fifth-block.component';
 import { SixthBlockComponent } from './sixth-block/sixth-block.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
+import { UserService } from './user/user.service';
 import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { GeneralInformationComponent } from './general-information/general-information.component';
 import { MoreDetailsComponent } from './more-details/more-details.component';
 import { SetFeaturedComponent } from './set-featured/set-featured.component';
 import { AllInformationComponent } from './all-information/all-information.component';
-
-// const appRoutes:Routes=[
-//  { path:'home',
-//   component: },
-//   {
-//     path:'login',
-//     component:FormComponent
-//   }
-
-// ]
-
+import { TableComponent } from './table/table.component';
 
 
 @NgModule({
@@ -49,12 +41,14 @@ import { AllInformationComponent } from './all-information/all-information.compo
     GeneralInformationComponent,
     MoreDetailsComponent,
     SetFeaturedComponent,
-    AllInformationComponent
+    AllInformationComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     DpDatePickerModule,
+    HttpClientModule, 
     RouterModule.forRoot([
       {
         path: 'form',
@@ -68,7 +62,15 @@ import { AllInformationComponent } from './all-information/all-information.compo
         path: '',
         pathMatch: 'full',
         component: HomeComponent
-      }
+      },
+      
+          {
+      
+            path:'table',
+      
+            component: TableComponent
+      
+          }
     ])
   ],
   providers: [],

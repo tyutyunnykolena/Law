@@ -1,14 +1,14 @@
 <div class="progress">
     <div>
     <a *ngIf="step == 1" class = "orange">1</a>
-    <a *ngIf="step != 1 && !product.step1saved" class = "grey">1</a>
-    <a *ngIf="step != 1 && product.step1saved" class = "green">1</a>
+    <a *ngIf="step != 1 && !step1saved" class = "grey">1</a>
+    <a *ngIf="step != 1 && step1saved" class = "green">1</a>
     <a *ngIf="step == 2" class = "orange">2</a>
-    <a *ngIf="step != 2 && !product.step2saved" class = "grey">2</a>
-    <a *ngIf="step != 2 && product.step2saved" class = "green">2</a>
+    <a *ngIf="step != 2 && !step2saved" class = "grey">2</a>
+    <a *ngIf="step != 2 && step2saved" class = "green">2</a>
     <a *ngIf="step == 3" class = "orange">3</a>
-    <a *ngIf="step != 3 && !product.step3saved" class = "grey">3</a>
-    <a *ngIf="step != 3 && product.step3saved" class = "green">3</a>
+    <a *ngIf="step != 3 && !step3saved" class = "grey">3</a>
+    <a *ngIf="step != 3 && step3saved" class = "green">3</a>
     </div>
     <br>
     <app-general-information *ngIf="step==1" [product] = "product" (generalInformationSaved) = "SaveUserGeneralInformation($event)"></app-general-information>
