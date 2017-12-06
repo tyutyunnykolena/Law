@@ -3,7 +3,7 @@ var productDirectory = require('../models/product');
 var Product = mongoose.model('product'),bcrypt=require('bcryptjs');
 
 exports.getProducts = function(req,res){
-	Product.find({},'title',function(err,products){
+	Product.find({},function(err,products){
 		if(err)
 			return res.send(err);
 		res.json(products);

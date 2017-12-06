@@ -73,7 +73,7 @@ import { TableComponent } from './table/table.component';
           }
     ])
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

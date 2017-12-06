@@ -1,7 +1,8 @@
 <form #setFeaturedForm = "ngForm">
+    <div> 
     <div class = "input">
     <div>
-    <label>Card number: </label>
+    <label>Email: </label>
     <input type="text" name='email'  required  [(ngModel)]="product.email" #email="ngModel">
     
     <div *ngIf="cardnumber.errors && (cardnumber.dirty || cardnumber.touched)" class="alert alert-danger">
@@ -19,7 +20,7 @@
     </div>
     
     <!-- <div> -->
-    
+    </div> 
     <div class="input">
     
     <div>
@@ -80,12 +81,24 @@
     </div>
     <div>
     <div class = "input">
-    <button [disabled] = "!paymentForm.form.valid" (click) = "savepayment()">Save</button>
+    <button [disabled] = "!setFeaturedForm.form.valid" (click) = "SaveUserSetFeatured()">Save</button>
     </div>
     </div>
     <div>
     <div class = "input">
-    <button  (click)="finish()">Finish</button> 
+    <!-- <button  (click)="finish()">Finish</button>  -->
+    
+<button  (click)="update()">Update</button> 
+</div> 
+</div> 
+<div> 
+<div class="input"> 
+<button  (click)="finish()">Register</button> 
+</div> 
+</div> 
+<div> 
+<div class="input"> 
+<button  (click)="pay(product)">Pay</button> 
     <!-- <button [disabled] = "!product.step1saved || !product.step2saved || !product.step3saved" (click) = "finish()">Finish</button> -->
     </div>
     </div>

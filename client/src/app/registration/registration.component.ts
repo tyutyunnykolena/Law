@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import {DatePickerComponent} from 'ng2-date-picker';
 
@@ -20,17 +20,14 @@ import {UserService} from '../user/user.service';
 
 export class RegistrationComponent implements OnInit {
 
+@Input() updateproduct:object; 
 public step1saved=false;
-
 public step2saved=false;
-
 public step3saved=false;
-
 public isauction='';
-
 public step=1;
-
 public product: object={
+	_id:'', 
 
   	image:'',
 
@@ -71,8 +68,8 @@ public product: object={
   	API_URL='http://localhost:8000/app/v1/product';
 
   ngOnInit() {
-
-  }
+	this.product=this.updateproduct ? this.updateproduct : {};
+ }
 
 
 
@@ -82,7 +79,7 @@ this.step+=(isNext)?1:-1;
 
 }
 
-savegeneral(product: object)
+SaveUserGeneralInformation(product: object)
 
 {
 
@@ -94,7 +91,7 @@ this.step1saved=true;
 
 }
 
-savedetails(product: object)
+SaveUserMoreDetails(product: object)
 
 {
 
@@ -106,7 +103,7 @@ this.step2saved=true;
 
 }
 
-savepayment(product: object)
+SaveUserSetFeatured(product: object)
 
 {
 
